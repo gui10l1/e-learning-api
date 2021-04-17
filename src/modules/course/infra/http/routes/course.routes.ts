@@ -1,4 +1,5 @@
 import { Router } from 'express';
+import { celebrate, Joi, Segments } from 'celebrate';
 import multer from 'multer';
 
 import uploadConfig from '@config/uploadConfig';
@@ -14,6 +15,15 @@ coursesRoutes.use(ensureAuthentication);
 
 coursesRoutes.get('/', coursesController.index);
 coursesRoutes.post('/', upload.single('image'), coursesController.create);
-coursesRoutes.put('/', upload.single('image'), coursesController.update);
+coursesRoutes.put(
+  '/:id',
+  celebrate({
+    [Segments.PARAMS]: {
+      id: Joi.string().uuid().required(),
+    },
+  }),
+  upload.single('image'),
+  coursesController.update,
+);
 
 export default coursesRoutes;

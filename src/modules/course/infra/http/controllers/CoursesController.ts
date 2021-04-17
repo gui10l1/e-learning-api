@@ -4,6 +4,7 @@ import { classToClass } from 'class-transformer';
 
 import CreateCoursesService from '@modules/course/services/CreateCoursesService';
 import ListCoursesService from '@modules/course/services/ListCoursesService';
+import UpdateCoursesService from '@modules/course/services/UpdateCoursesService';
 
 export default class CoursesController {
   public async index(req: Request, res: Response): Promise<Response> {
@@ -35,8 +36,24 @@ export default class CoursesController {
   }
 
   public async update(req: Request, res: Response): Promise<Response> {
+    const { id } = req.params;
     const { name } = req.body;
+    const fileFromRequest = req.file as Express.Multer.File;
 
-    return res.send({ name });
+    const image = fileFromRequest.filename;
+
+    const service = container.resolve(UpdateCoursesService);
+
+    const response = await service.execute({
+      courseId: id,
+      data: {
+        image,
+        name,
+      },
+    });
+
+    const course = classToClass(response);
+
+    return res.status(201).json(course);
   }
 }
