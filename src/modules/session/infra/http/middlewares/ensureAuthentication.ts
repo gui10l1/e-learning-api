@@ -18,7 +18,7 @@ export default function ensureAuthentication(
   const headers = req.headers.authorization;
 
   if (!headers) {
-    throw new AppError('Authorization token  is missing!');
+    throw new AppError('Authorization token is missing!');
   }
 
   const [, token] = headers.split(' ');

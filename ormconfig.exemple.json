@@ -1,0 +1,13 @@
+{
+  "type": "postgres",
+  "host": "127.0.0.1",
+  "port": "5432",
+  "username": "",
+  "password": "",
+  "database": "",
+  "cli": {
+    "migrationsDir": "./src/shared/infra/database/typeorm/migrations"
+  },
+  "entities": ["./src/modules/**/infra/database/typeorm/entities/*.ts"],
+  "migrations": ["./src/shared/infra/database/typeorm/migrations/*.ts"]
+}
