@@ -35,7 +35,12 @@ export default class CreateLessonsService {
       );
     }
 
-    const lesson = await this.lessonsRepository.create(data);
+    const parsedData = {
+      ...data,
+      duration: data.duration * 60,
+    };
+
+    const lesson = await this.lessonsRepository.create(parsedData);
 
     return lesson;
   }
