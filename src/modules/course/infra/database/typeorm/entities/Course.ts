@@ -1,3 +1,4 @@
+import Lesson from '@modules/lesson/infra/database/typeorm/entities/Lesson';
 import { Expose } from 'class-transformer';
 import {
   Entity,
@@ -5,6 +6,7 @@ import {
   Column,
   CreateDateColumn,
   UpdateDateColumn,
+  OneToMany,
 } from 'typeorm';
 
 @Entity('courses')
@@ -17,6 +19,9 @@ export default class Course {
 
   @Column()
   image: string;
+
+  @OneToMany(() => Lesson, lesson => lesson.course)
+  lessons: Lesson[];
 
   @CreateDateColumn()
   created_at: Date;

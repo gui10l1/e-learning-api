@@ -29,7 +29,9 @@ export default class CoursesRepository implements ICoursesRepository {
   }
 
   public async listAllCourses(): Promise<Course[]> {
-    return this.ormRepository.find();
+    return this.ormRepository.find({
+      relations: ['lessons'],
+    });
   }
 
   public async update(
