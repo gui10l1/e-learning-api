@@ -5,6 +5,7 @@ import { classToClass } from 'class-transformer';
 import CreateCoursesService from '@modules/course/services/CreateCoursesService';
 import ListCoursesService from '@modules/course/services/ListCoursesService';
 import UpdateCoursesService from '@modules/course/services/UpdateCoursesService';
+import FindCoursesService from '@modules/course/services/FindCoursesService';
 
 export default class CoursesController {
   public async index(req: Request, res: Response): Promise<Response> {
@@ -55,5 +56,17 @@ export default class CoursesController {
     const course = classToClass(response);
 
     return res.status(201).json(course);
+  }
+
+  public async find(req: Request, res: Response): Promise<Response> {
+    const { id } = req.params;
+
+    const service = container.resolve(FindCoursesService);
+
+    const course = await service.execute(id);
+
+    const response = classToClass(course);
+
+    return res.status(200).json(response);
   }
 }
