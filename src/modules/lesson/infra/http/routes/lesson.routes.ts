@@ -9,7 +9,7 @@ const lessonRoutes = Router();
 const lessonsController = new LessonsController();
 
 // GET
-lessonRoutes.get('/', ensureAuthentication, lessonsController.index);
+lessonRoutes.get('/', lessonsController.index);
 lessonRoutes.get('/:id', lessonsController.find);
 
 // POST

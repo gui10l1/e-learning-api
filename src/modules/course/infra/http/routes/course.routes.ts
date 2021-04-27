@@ -14,6 +14,7 @@ const upload = multer(uploadConfig);
 // coursesRoutes.use(ensureAuthentication);
 
 coursesRoutes.get('/', coursesController.index);
+coursesRoutes.get('/:id', coursesController.find);
 coursesRoutes.post('/', upload.single('image'), coursesController.create);
 coursesRoutes.put(
   '/:id',
