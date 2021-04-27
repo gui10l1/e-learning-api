@@ -25,6 +25,7 @@ export default class CoursesRepository implements ICoursesRepository {
   public async findById(courseId: string): Promise<Course | undefined> {
     return this.ormRepository.findOne({
       where: { id: courseId },
+      relations: ['lessons'],
     });
   }
 
