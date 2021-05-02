@@ -26,6 +26,9 @@ Typeorm is included to help you with all this.
 
 For more informations to deal with Typeorm read the [docs](https://typeorm.io/#/)
 
+To create the database tables you just need to run `yarn typeorm migration:run`
+after doing the connection configration on **ormconfig.json** file.
+
 ## Environment variables
 
 There are some environment variables which need to be set up.
@@ -43,6 +46,40 @@ This variable sets up the URL of the server.
 * WEB_URL
 
 This variable sets up the URL of the frontend server.
+
+## Modules
+
+This API is separated by four modules which are:
+
+1. User
+
+Users are whoever downloaded teh application, they don't need to be
+authenticated inside the app.
+
+Data for users: name, email, password
+
+2. Session
+
+Sessions are used to control the admins authentications and there are
+some routes that need this (auth) to proceed with the request.
+
+Data for sessions: email, password
+
+3. Course
+
+Courses are something like science, biology, etc. They are used to classify
+lessons.
+
+Data for courses: name, image
+
+4. Lesson
+
+Lessons are classified by courses and bring a resume and a video with them.
+
+Data for lessons: name, description, duration, **video_id**, course_id.
+
+*video_id*: this is used to play a video from YT. These id's are get by the YT
+URL, like: youtube.com/watch?v=**fzeWc3zh01g**
 
 ## Routes
 
