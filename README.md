@@ -91,7 +91,7 @@ Here is a list of E-Learning's routes:
 
 | Method | Route | Module | Objective | Needs authentication |
 | ------ | ----- | ------ | --------- | -------------------- |
-| POST | /users  | User | Saves a new user into the database | :x: |
+| POST | /users  | User | Saves a new user into the database | :heavy_check_mark: |
 | POST | /sessions | Session | Does the application authentication | :x: |
 | GET  | /lessons | Lesson | Gets all lessons from the database | :x: |
 | GET  | /lessons/:id | Lesson | Finds a specific lesson from database | :x: |
