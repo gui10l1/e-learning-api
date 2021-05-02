@@ -91,17 +91,17 @@ Here is a list of E-Learning's routes:
 
 | Method | Route | Module | Objective | Needs authentication |
 | ------ | ----- | ------ | --------- | -------------------- |
-| POST | /users  | User | Saves a new user into the database | NO |
-| POST | /sessions | Session | Does the application authentication | NO |
-| GET  | /lessons | Lesson | Gets all lessons from the database | NO |
-| GET  | /lessons/:id | Lesson | Finds a specific lesson from database | NO |
-| GET  | /course-lessons/:id | Lesson | Gets all lessons from a specific course | NO |
-| POST | /lessons | Lesson | Saves a new lesson into the database | YES |
-| PUT  | /lessons/:id | Lesson | Does the update of a specific lesson | YES |
-| GET  | /courses | Course | Gets all courses from the database | NO |
-| GET  | /courses/:id | Course | Finds a specific course from database | NO |
-| POST | /courses | Course | Saves a new course into the database | YES |
-| PUT  | /courses/:id | Course | Does the update of a specific course | YES |
+| POST | /users  | User | Saves a new user into the database | :x: |
+| POST | /sessions | Session | Does the application authentication | :x: |
+| GET  | /lessons | Lesson | Gets all lessons from the database | :x: |
+| GET  | /lessons/:id | Lesson | Finds a specific lesson from database | :x: |
+| GET  | /course-lessons/:id | Lesson | Gets all lessons from a specific course | :x: |
+| POST | /lessons | Lesson | Saves a new lesson into the database | :heavy_check_mark: |
+| PUT  | /lessons/:id | Lesson | Does the update of a specific lesson | :heavy_check_mark: |
+| GET  | /courses | Course | Gets all courses from the database | :x: |
+| GET  | /courses/:id | Course | Finds a specific course from database | :x: |
+| POST | /courses | Course | Saves a new course into the database | :heavy_check_mark: |
+| PUT  | /courses/:id | Course | Does the update of a specific course | :heavy_check_mark: |
 
 # Front-End
 
