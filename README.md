@@ -1,6 +1,6 @@
 # E-Learning API
 
-This is part of a project called E-Learning. This API is made for an application
+This is part of a project called E-Learning. This API was made for an application
 which is focused on online learning.
 
 The users (whoever downloaded the app) can see the courses on the main screen
@@ -9,8 +9,8 @@ user goes on and on.
 
 # Installation
 
-To install this API you need to run `yarn` to install all the dependencies and
-then run `yarn dev` to start de developement server.
+For this API you need to run `yarn` to install all the dependencies, and then
+run `yarn dev` to start the development server.
 
 # API informations
 
