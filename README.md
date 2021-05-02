@@ -48,19 +48,19 @@ This variable sets up the URL of the frontend server.
 
 Here is a list of E-Learning's routes:
 
-Method | Route | Module | Objective
------------------------------------
-POST | /users | User | Saves a new user into the database
-POST | /sessions | Session | Does the application authentication
-GET | /lessons | Lesson | Gets all lessons from the database
-GET | /lessons/:id | Lesson | Finds a specific lesson from database
-GET | /course-lessons/:id | Lesson | Gets all lessons from a specific course
-POST | /lessons | Lesson | Saves a new lesson into the database
-PUT | /lessons/:id | Lesson | Does the update of a specific lesson
-GET | /courses | Course | Gets all courses from the database
-GET | /courses/:id | Course | Finds a specific course from database
-POST | /courses | Course | Saves a new course into the database
-PUT | /courses/:id | Course | Does the update of a specific course
+| Method | Route | Module | Objective |
+| ------ | ----- | ------ | --------- |
+| POST | /users  | User | Saves a new user into the database |
+| POST | /sessions | Session | Does the application authentication |
+| GET  | /lessons | Lesson | Gets all lessons from the database |
+| GET  | /lessons/:id | Lesson | Finds a specific lesson from database |
+| GET  | /course-lessons/:id | Lesson | Gets all lessons from a specific course |
+| POST | /lessons | Lesson | Saves a new lesson into the database |
+| PUT  | /lessons/:id | Lesson | Does the update of a specific lesson |
+| GET  | /courses | Course | Gets all courses from the database |
+| GET  | /courses/:id | Course | Finds a specific course from database |
+| POST | /courses | Course | Saves a new course into the database |
+| PUT  | /courses/:id | Course | Does the update of a specific course |
 
 # Front-End
 
