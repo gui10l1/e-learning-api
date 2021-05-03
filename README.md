@@ -12,7 +12,7 @@ user goes on and on.
 For this API you need to run `yarn` to install all the dependencies, and
 then run `yarn dev` to start the development server.
 
-# API informations
+# API information
 
 ## Configuration
 
